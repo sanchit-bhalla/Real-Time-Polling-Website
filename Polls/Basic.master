@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Basic.master.cs" Inherits="Basic" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script> 
+     <link rel="stylesheet" href="StyleSheet.css" />
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+      <form id="form1" runat="server">
+            <nav style="background-color :#f77d74" class="navbar navbar-expand-lg navbar-light fixed-top">
+                <a class="navbar-brand" style="color: white" href="/"><strong>E-Poll</strong></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a style="color: white" class="nav-link" href="Default.aspx"><strong>Home</strong></a>
+                </li>
+                  <li class="nav-item active">
+                  <a style="color: white" class="nav-link" href="Authentication.aspx"><strong>Start Voting</strong></a>
+                </li>
+                <li class="nav-item active">
+                  <a style="color: white" class="nav-link" href="#"><strong>About us</strong></a>
+                </li>
+
+                  <asp:ContentPlaceHolder id="NavbarContent" runat="server">
+
+                  </asp:ContentPlaceHolder>                
+        
+              </ul>
+            </div>
+          </nav>
+  
+    <div>
+        <br />
+        <br />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    </div>
+
+      <div class="container">
+  <footer style="background-color :#f77d74; height :90px;padding-top:20px">
+    <div class="rounded-social-buttons">
+                      <a style="margin-right :30px" class="social-button facebook space" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                      <a style="margin-right :30px" class="social-button twitter space" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                      <a style="margin-right :30px" class="social-button linkedin space" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                      <a style="margin-right :30px" class="social-button youtube space" href="https://www.youtube.com/watch?v=p1MlSvvuQAs&list=PLT-C0gOShiOZAoalwF82Vo-Owc4TRoUtu" target="_blank"><i class="fab fa-youtube"></i></a>
+                      <a style="margin-right :30px" class="social-button instagram space" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  </div>
+  </footer>
+</div>
+    </form>
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<asp:ContentPlaceHolder id="Contentjs" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
