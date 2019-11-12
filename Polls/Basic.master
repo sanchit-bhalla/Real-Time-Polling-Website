@@ -31,7 +31,7 @@
                   <a style="color: white" class="nav-link" href="Default.aspx"><strong>Home</strong></a>
                 </li>                  
                 <li class="nav-item active">
-                  <a style="color: white" class="nav-link" href="#"><strong>About us</strong></a>
+                  <a style="color: white" class="nav-link" href="AboutUs.aspx"><strong>About us</strong></a>
                 </li>
 
                   <asp:ContentPlaceHolder id="NavbarContent" runat="server">

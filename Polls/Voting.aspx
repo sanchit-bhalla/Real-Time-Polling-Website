@@ -32,7 +32,7 @@
             </div>
             <div class="col-md-4" style="padding: 5px">
                 <div class="card" style="width: 18rem;">
-                  <asp:Image ID="CandidateBImage" class="card-img-top" runat="server" ImageUrl="~/female_icon.jpg" Height="220" />
+                  <asp:Image ID="CandidateBImage" class="card-img-top" runat="server" ImageUrl="~/female_icon.png" Height="220" />
                   <div class="card-body">
                     <h5 class="card-title">Candidate B
                         <span class="mx-4">

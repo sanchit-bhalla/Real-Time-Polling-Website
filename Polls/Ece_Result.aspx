@@ -37,7 +37,7 @@
          <div class="row my-5">
              <div class="col-2"></div>
             <div class="col-3">
-                <asp:Image ID="Image2" class="card-img-top" runat="server" ImageUrl="~/female_icon.jpg" Height="180" Width="160" />
+                <asp:Image ID="Image2" class="card-img-top" runat="server" ImageUrl="~/female_icon.png" Height="180" Width="160" />
             </div>
             <div class="col-5 mx-3" style="margin-top: 97px">                                
                 <div style="width: 100%; background-color:#e0c4ba">
