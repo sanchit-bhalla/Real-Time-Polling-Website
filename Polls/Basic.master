@@ -14,6 +14,7 @@
      <link rel="stylesheet" href="StyleSheet.css" />
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
+
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -28,10 +29,7 @@
               <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
                   <a style="color: white" class="nav-link" href="Default.aspx"><strong>Home</strong></a>
-                </li>
-                  <li class="nav-item active">
-                  <a style="color: white" class="nav-link" href="Authentication.aspx"><strong>Start Voting</strong></a>
-                </li>
+                </li>                  
                 <li class="nav-item active">
                   <a style="color: white" class="nav-link" href="#"><strong>About us</strong></a>
                 </li>

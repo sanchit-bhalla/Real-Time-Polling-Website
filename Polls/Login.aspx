@@ -1,11 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Basic.master" AutoEventWireup="true" CodeFile="Authentication.aspx.cs" Inherits="Authentication" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Basic.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="NavbarContent" Runat="Server">
-     <li class="nav-item">
-        <a style="color: white" class="nav-link cw" href="Authentication.aspx"><strong>Login/Signup</strong></a>
+     <li class="nav-item active">
+        <a style="color: white" class="nav-link cw" href="Login.aspx"><strong>Login/Signup</strong></a>
       </li>
 </asp:Content>
 
@@ -19,10 +19,10 @@
                     <div class="col-12">
                         <div class="row">
                             <div class="col-6" style="background-color :#f77d74">
-                                <a href="Authentication.aspx"><h2 align="center" style ="color: white">Login</h2></a>
+                                <a href="Login.aspx"><h2 align="center" style ="color: white">Login</h2></a>
                             </div>
                             <div class="col-6">
-                                <a href="SignUp.aspx"><h2 align="center" style="color:grey">SignUp</h2></a>
+                                <a href="SignUp1.aspx"><h2 align="center" style="color:grey">SignUp</h2></a>
                             </div>
                         </div>
                         
@@ -54,4 +54,3 @@
       </div>       
 
 </asp:Content>
-

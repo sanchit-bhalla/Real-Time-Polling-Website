@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Basic.master" AutoEventWireup="true" CodeFile="Results.aspx.cs" Inherits="Results" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Basic.master" AutoEventWireup="true" CodeFile="Ece_Result.aspx.cs" Inherits="Ece_Result" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
@@ -24,11 +24,11 @@
         <div class="row my-5">
             <div class="col-2"></div>
             <div class="col-3">
-                <asp:Image ID="Image1" class="card-img-top" runat="server" ImageUrl="~/Rashtar.png" Height="200" Width="180" />
+                <asp:Image ID="Image1" class="card-img-top" runat="server" ImageUrl="~/male_icon.png" Height="200" Width="180" />
             </div>
             <div class="col-5 mx-3" style="margin-top: 97px">                                
                     <div style="width: 100%; background-color:#e0c4ba">
-                      <div class="myBar"><asp:Label ID="RashtarVotes" class="RV" runat="server" Text=""></asp:Label></div>
+                      <div class="myBar"><asp:Label ID="AVotes" class="CA" runat="server" Text=""></asp:Label></div>
                     </div>                                
             </div>      
         </div>
@@ -37,11 +37,11 @@
          <div class="row my-5">
              <div class="col-2"></div>
             <div class="col-3">
-                <asp:Image ID="Image2" class="card-img-top" runat="server" ImageUrl="~/suryansh.png" Height="200" Width="180" />
+                <asp:Image ID="Image2" class="card-img-top" runat="server" ImageUrl="~/female_icon.jpg" Height="180" Width="160" />
             </div>
             <div class="col-5 mx-3" style="margin-top: 97px">                                
                 <div style="width: 100%; background-color:#e0c4ba">
-                      <div class="myBar"><asp:Label ID="ParulVotes" runat="server" class="PV" Text=""></asp:Label></div>
+                      <div class="myBar"><asp:Label ID="BVotes" runat="server" class="CB" Text=""></asp:Label></div>
                  </div>                                                
             </div>      
         </div>
@@ -54,26 +54,26 @@
         document.getElementsByClassName("nav-link")[1].setAttribute("href", "#");
         document.getElementsByClassName("nav-link")[1].textContent = "";
 
-        var str_rashtar_votes = document.getElementsByClassName("RV")[0].innerText;
-        var rashtar_votes = parseInt(str_rashtar_votes);
-        var str_parul_votes = document.getElementsByClassName("PV")[0].innerText;
-        var parul_votes = parseInt(str_parul_votes);
+        var str_A_votes = document.getElementsByClassName("CA")[0].innerText;
+        var A_votes = parseInt(str_A_votes);
+        var str_B_votes = document.getElementsByClassName("CB")[0].innerText;
+        var B_votes = parseInt(str_B_votes);
 
-        var ras_per = rashtar_votes * 100 / (rashtar_votes + parul_votes);
-        var par_per = parul_votes * 100 / (rashtar_votes + parul_votes);
+        var A_per = A_votes * 100 / (A_votes + B_votes);
+        var B_per = B_votes * 100 / (A_votes + B_votes);
 
-        document.getElementsByClassName("myBar")[0].style.width = (Math.round(ras_per * 100) / 100).toString() + "%";
-        document.getElementsByClassName("myBar")[1].style.width = (Math.round(par_per * 100) / 100).toString() + "%";
+        document.getElementsByClassName("myBar")[0].style.width = (Math.round(A_per * 100) / 100).toString() + "%";
+        document.getElementsByClassName("myBar")[1].style.width = (Math.round(B_per * 100) / 100).toString() + "%";
 
-        document.getElementsByClassName("RV")[0].innerText = (Math.round(ras_per * 100) / 100).toString() + "%";
-        document.getElementsByClassName("PV")[0].innerText = (Math.round(par_per * 100) / 100).toString() + "%";
+        document.getElementsByClassName("CA")[0].innerText = (Math.round(A_per * 100) / 100).toString() + "%";
+        document.getElementsByClassName("CB")[0].innerText = (Math.round(B_per * 100) / 100).toString() + "%";
 
-        if (rashtar_votes > parul_votes) {
-            document.getElementById("lblwinner").textContent = "Winner is Rashtar";
-        } else if (rashtar_votes == parul_votes) {
+        if (A_votes > B_votes) {
+            document.getElementById("lblwinner").textContent = "Winner is Candidate A";
+        } else if (A_votes == B_votes) {
             document.getElementById("lblwinner").textContent = "Tie !";
         } else {
-            document.getElementById("lblwinner").textContent = "Winner is ";
+            document.getElementById("lblwinner").textContent = "Winner is Candidate B";
         }
     </script>
 </asp:Content>

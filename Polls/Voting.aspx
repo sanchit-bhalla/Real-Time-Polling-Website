@@ -1,15 +1,16 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Basic.master" AutoEventWireup="true" CodeFile="StartVoting.aspx.cs" Inherits="StartVoting" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Basic.master" AutoEventWireup="true" CodeFile="Voting.aspx.cs" Inherits="Voting" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="NavbarContent" Runat="Server">
-            <li class="nav-item">
+            <li class="nav-item active">
                   <a style="color: white" class="nav-link cw" href="Default.aspx"><strong>Logout</strong></a>
             </li>
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
     <h3 style="margin-left:30%; margin-top:40px"><asp:Label ID="lblname"  runat="server" Text="Label"></asp:Label></h3>
 
@@ -19,35 +20,25 @@
         <div class="row justify-content-center">
             <div class="col-md-4" style="padding: 5px">
                 <div class="card" style="width: 18rem;">
-                  <asp:Image ID="RashtarImage" class="card-img-top" runat="server" ImageUrl="~/Rashtar.png" Height="220" />
+                  <asp:Image ID="Image2" class="card-img-top" runat="server" ImageUrl="~/male_icon.png" Height="220" />
                   <div class="card-body">
-                    <h5 class="card-title">Rashtardeep Singh Sandhu</h5>
-                    <p class="card-text">CR of CSE B.tech CSE section b...</p>                     
-                      <div class="row">
-                          <div class="col-3 mx-2">
-                              <a href="#" class="btn btn-primary">Agenda</a>
-                          </div>
-                          <div class="col-3 mx-5">
-                              <asp:ImageButton style="height:30px; width:35px" ID="RashtarVote" OnClick="vote_for_rashtar" runat="server" ImageUrl="~/like.png" />
-                          </div>
-                      </div>                    
+                    <h5 class="card-title">Candidate A
+                        <span class="mx-4">
+                            <asp:ImageButton style="height:30px; width:35px" ID="ImageButton1" OnClick="vote_for_A" runat="server" ImageUrl="~/like.png" />
+                        </span>
+                    </h5>                                                             
                   </div>
                 </div>
             </div>
             <div class="col-md-4" style="padding: 5px">
                 <div class="card" style="width: 18rem;">
-                  <asp:Image ID="ParulImage" class="card-img-top" runat="server" ImageUrl="~/suryansh.png" Height="220" />
+                  <asp:Image ID="CandidateBImage" class="card-img-top" runat="server" ImageUrl="~/female_icon.jpg" Height="220" />
                   <div class="card-body">
-                    <h5 class="card-title">Suryansh Saini</h5>
-                    <p class="card-text">Sports coordinator of B.Tech CSE</p>
-                    <div class="row">
-                          <div class="col-3 mx-2">
-                              <a href="#" class="btn btn-primary">Agenda</a>
-                          </div>
-                          <div class="col-3 mx-5">
-                              <asp:ImageButton style="height:30px; width:35px" ID="ParulVote" OnClick="vote_for_parul" runat="server" ImageUrl="~/like.png" />
-                          </div>
-                      </div>
+                    <h5 class="card-title">Candidate B
+                        <span class="mx-4">
+                            <asp:ImageButton style="height:30px; width:35px" ID="BVote" OnClick="vote_for_B" runat="server" ImageUrl="~/like.png" />
+                        </span>
+                    </h5>                                        
                   </div>
                 </div>
             </div>
@@ -70,8 +61,7 @@
     <h3 style="margin-left: 25%; margin-top:250px; margin-bottom:200px" id="before_vote"></h3>
 </asp:Content>
 
-
-<asp:Content ID="Content4" ContentPlaceHolderID="Contentjs" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="Contentjs" Runat="Server">
      <script>
         var t = new Date();
         if (t.getFullYear() == 2019 && t.getMonth() >= 10  && t.getDate() > 13) {
@@ -80,7 +70,7 @@
             $("#candidates").hide();
             $("#sorry_img").show();
             $("#before_vote").hide();
-            document.getElementById("results").innerHTML = '<h3 style="margin-top:90px" id="results"><a href="Results.aspx" id="results">View Results</a></h3>';
+            document.getElementById("results").innerHTML = '<h3 style="margin-top:90px" id="results"><a href="Ece_Result.aspx" id="results">View Results</a></h3>';
         } else if (t.getFullYear() == 2019 && t.getMonth() == 10 && t.getDate() == 13 ) {
             $("#results").hide();
             $("#sorry_img").hide();
@@ -98,3 +88,4 @@
         }
      </script>
 </asp:Content>
+
